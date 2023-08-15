@@ -32,7 +32,8 @@ EventService.getEvent(pageSize.value, props.page)
   })
 onBeforeRouteUpdate((to, from, next) => {
   const toPage = Number(to.query.page)
-  EventService.getEvent(3, toPage)
+  console.log(to.query.page)
+  EventService.getEvent(pageSize.value, toPage)
     .then((response: AxiosResponse<EventItem[]>) => {
       events.value = response.data
       totalEvent.value = response.headers['x-total-count']
@@ -58,7 +59,6 @@ const hasNextPage = computed(() => {
       type="number"
       id="page-size"
       v-model="pageSize"
-      @input="updatePage"
       min="1"
       :max="totalEvent"
     />

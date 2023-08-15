@@ -1,9 +1,9 @@
 <template>
     <div class="event-card">
       <!-- <span>@{{ event.category }} on {{ event?.organizer }}</span> -->
-      <h4>Name: {{ student.name }}</h4>
-      <h4>Surname: {{ student.surname}}</h4>
-      <h4>GPA: {{ student.gpa}}</h4>
+      <h4>Name: {{ student?.name }}</h4>
+      <h4>Surname: {{ student?.surname}}</h4>
+      <h4>GPA: {{ student?.gpa}}</h4>
     </div>
   </template>
   

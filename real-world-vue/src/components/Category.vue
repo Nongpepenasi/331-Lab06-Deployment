@@ -1,8 +1,8 @@
 <template>
     <div class="event-card">
       <!-- <span>@{{ event.category }} on {{ event?.organizer }}</span> -->
-      <h4>Category: {{ event.category }}</h4>
-      <h4>Organizer: {{ event.organizer}}</h4>
+      <h4>Category: {{ event?.category }}</h4>
+      <h4>Organizer: {{ event?.organizer}}</h4>
     </div>
   </template>
   
