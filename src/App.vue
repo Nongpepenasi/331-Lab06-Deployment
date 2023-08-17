@@ -1,34 +1,29 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { useMessageStore } from '@/stores/message';
+import { useMessageStore } from './stores/message';
 import { storeToRefs } from 'pinia';
 
 const store = useMessageStore()
 const { message } = storeToRefs(store)
-// import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
-  <header class="max-h-screen leading-normal">
-    <h3>642115021 Thanakorn Waleejaroenpong</h3>
-    <div id="flashMessage" v-if="message">
+  <header class="max-h-screen leading-normal">MMMMMM
+    <div id="flashMessage" v-if="message" class="animate-yellowfade">
       <h4 class="text-lg">{{ message }}</h4>
     </div>
-    <nav class="p-8 ">
-      <RouterLink :to="{name: 'event-list'}" class="font-bold text-gray-700 hover:text-green-500">Home</RouterLink>
-      <RouterLink :to="{name: 'about'}" class="font-bold text-gray-700 hover:text-green-500">About</RouterLink>
-      <RouterLink :to="{name: 'category'}" class="font-bold text-gray-700 hover:text-green-500">Category</RouterLink>
-      <RouterLink :to="{name: 'student'}" class="font-bold text-gray-700 hover:text-green-500">Student</RouterLink>
-      <!-- <RouterLink :></RouterLink> -->
+    <nav class="p-8">
+      <RouterLink :to="{ name: 'event-list' }" class="font-bold text-gray-700 hover:text-green-500">Home</RouterLink>
+      <RouterLink :to="{ name: 'about' }" class="font-bold text-gray-700 hover:text-green-500">About</RouterLink>
     </nav>
-
   </header>
   <RouterView />
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -39,13 +34,13 @@ const { message } = storeToRefs(store)
   from {
     background: yellow;
   }
+
   to {
     background: transparent;
   }
 }
 
-#flashMessage {
+.animate-yellowfade {
   animation: yellowfade 3s ease-in-out;
 }
-
 </style>
