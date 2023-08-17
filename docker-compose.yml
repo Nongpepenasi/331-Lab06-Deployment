@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  web:
+    image: "nongpepenasi/se331-lab06:amd64"
+    ports:
+      - 8001:80
