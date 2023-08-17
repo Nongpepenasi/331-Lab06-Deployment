@@ -28,7 +28,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: mm18/se331-lab06-3:latest
+        tags: nongpepenasi/se331-lab06:latest
     - 
       name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.4
