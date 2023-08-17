@@ -46,7 +46,7 @@ onBeforeRouteUpdate((to, from, next) => {
 })
 
 const hasNextPage = computed(() => {
-  const totalPages = Math.ceil(totalEvent.value / 2)
+  const totalPages = Math.ceil(totalEvent.value / 3)
   return props.page.valueOf() < totalPages
 })
 
@@ -57,12 +57,18 @@ const hasNextPage = computed(() => {
     <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
     <div class="flex w-72 justify-between">
       <RouterLink :to="{ name: 'event-list', query: { page: page - 1, limit: limit } }" rel="prev" v-if="page != 1"
-        class="text-left text-gray-700 no-underline" id="page-prev">Prev Page
+        class="text-left text-gray-700 no-underline" id="page-prev"> Prev
+        Page
       </RouterLink>
       <RouterLink :to="{ name: 'event-list', query: { page: page + 1, limit: limit } }" rel="next" v-if="hasNextPage"
-        class="text-right text-gray-700 no-underline" id="page-next">
+      class=" text-right text-gray-700 no-underline" id="page-next">
         Next Page
       </RouterLink>
     </div>
+
   </main>
 </template>
+
+<style scoped>
+
+</style>

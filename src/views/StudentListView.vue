@@ -3,6 +3,7 @@ import type { StudentItem } from '@/type'
 import { ref, type Ref } from 'vue'
 import StudentService from '@/services/StudentService';
 
+
 const students: Ref<Array<StudentItem>> = ref([])
 
 StudentService.getEvent().then((response) => {

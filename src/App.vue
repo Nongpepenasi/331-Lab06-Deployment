@@ -9,13 +9,15 @@ const { message } = storeToRefs(store)
 </script>
 
 <template>
-  <header class="max-h-screen leading-normal">MMMMMM
+  <header class="max-h-screen leading-normal">
+    <h1>Thiwakon Sakunchao</h1>
     <div id="flashMessage" v-if="message" class="animate-yellowfade">
       <h4 class="text-lg">{{ message }}</h4>
     </div>
     <nav class="p-8">
       <RouterLink :to="{ name: 'event-list' }" class="font-bold text-gray-700 hover:text-green-500">Home</RouterLink>
       <RouterLink :to="{ name: 'about' }" class="font-bold text-gray-700 hover:text-green-500">About</RouterLink>
+      
     </nav>
   </header>
   <RouterView />
@@ -29,6 +31,8 @@ const { message } = storeToRefs(store)
   text-align: center;
   color: #2c3e50;
 }
+
+
 
 @keyframes yellowfade {
   from {
