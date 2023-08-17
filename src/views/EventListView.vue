@@ -52,6 +52,7 @@ const hasNextPage = computed(() => {
 })
 </script>
 <template>
+  <div>
   <h1>Event For Good</h1>
   <div class="pb-5">
     <label for="page-size">Page Size:</label>
@@ -85,4 +86,5 @@ const hasNextPage = computed(() => {
       </RouterLink>
     </div>
   </main>
+  </div>
 </template>
