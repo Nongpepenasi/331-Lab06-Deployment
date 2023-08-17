@@ -44,7 +44,7 @@ const router = createRouter({
       beforeEnter: (to) => {
         const id: number = parseInt(to.params.id as string)
         const eventStore = useEventStore()
-        return EventService.getEventById(id)
+        return EventService.getEventById(123)
         .then((response) => {
           eventStore.setEvent(response.data)
         })
